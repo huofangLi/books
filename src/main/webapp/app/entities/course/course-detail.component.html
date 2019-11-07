@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="course">
+            <h2><span jhiTranslate="booksApp.course.detail.title">Course</span> {{course.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="booksApp.course.courseClassification">Course Classification</span></dt>
+                <dd>
+                    <span>{{course.courseClassification}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseName">Course Name</span></dt>
+                <dd>
+                    <span>{{course.courseName}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseImage">Course Image</span></dt>
+                <dd>
+                    <span>{{course.courseImage}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseDescribe">Course Describe</span></dt>
+                <dd>
+                    <span>{{course.courseDescribe}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.coursePrice">Course Price</span></dt>
+                <dd>
+                    <span>{{course.coursePrice}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseChapter">Course Chapter</span></dt>
+                <dd>
+                    <span>{{course.courseChapter}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseIntroduction">Course Introduction</span></dt>
+                <dd>
+                    <span>{{course.courseIntroduction}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.courseVideo">Course Video</span></dt>
+                <dd>
+                    <span>{{course.courseVideo}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.presenter">Presenter</span></dt>
+                <dd>
+                    <span>{{course.presenter}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.presenterImage">Presenter Image</span></dt>
+                <dd>
+                    <span>{{course.presenterImage}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.presenterIntroduction">Presenter Introduction</span></dt>
+                <dd>
+                    <span>{{course.presenterIntroduction}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.course.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{course.createTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/course', course.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

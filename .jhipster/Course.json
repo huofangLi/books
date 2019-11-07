@@ -1,0 +1,64 @@
+{
+    "name": "Course",
+    "fields": [
+        {
+            "fieldName": "courseClassification",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseImage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseDescribe",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coursePrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "courseChapter",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseIntroduction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "courseVideo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "presenter",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "presenterImage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "presenterIntroduction",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191107035004",
+    "javadoc": "课程",
+    "entityTableName": "course",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

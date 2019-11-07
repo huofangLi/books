@@ -1,0 +1,36 @@
+{
+    "name": "Note",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "note",
+            "relationshipName": "bookId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035009",
+    "javadoc": "笔记",
+    "entityTableName": "note",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,85 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-course-heading" jhiTranslate="booksApp.course.home.createOrEditLabel">Create or edit a Course</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseClassification" for="field_courseClassification">Course Classification</label>
+                    <input type="text" class="form-control" name="courseClassification" id="field_courseClassification"
+                           formControlName="courseClassification"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseName" for="field_courseName">Course Name</label>
+                    <input type="text" class="form-control" name="courseName" id="field_courseName"
+                           formControlName="courseName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseImage" for="field_courseImage">Course Image</label>
+                    <input type="text" class="form-control" name="courseImage" id="field_courseImage"
+                           formControlName="courseImage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseDescribe" for="field_courseDescribe">Course Describe</label>
+                    <input type="text" class="form-control" name="courseDescribe" id="field_courseDescribe"
+                           formControlName="courseDescribe"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.coursePrice" for="field_coursePrice">Course Price</label>
+                    <input type="number" class="form-control" name="coursePrice" id="field_coursePrice"
+                           formControlName="coursePrice"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseChapter" for="field_courseChapter">Course Chapter</label>
+                    <input type="text" class="form-control" name="courseChapter" id="field_courseChapter"
+                           formControlName="courseChapter"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseIntroduction" for="field_courseIntroduction">Course Introduction</label>
+                    <input type="text" class="form-control" name="courseIntroduction" id="field_courseIntroduction"
+                           formControlName="courseIntroduction"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.courseVideo" for="field_courseVideo">Course Video</label>
+                    <input type="text" class="form-control" name="courseVideo" id="field_courseVideo"
+                           formControlName="courseVideo"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.presenter" for="field_presenter">Presenter</label>
+                    <input type="text" class="form-control" name="presenter" id="field_presenter"
+                           formControlName="presenter"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.presenterImage" for="field_presenterImage">Presenter Image</label>
+                    <input type="text" class="form-control" name="presenterImage" id="field_presenterImage"
+                           formControlName="presenterImage"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.presenterIntroduction" for="field_presenterIntroduction">Presenter Introduction</label>
+                    <input type="text" class="form-control" name="presenterIntroduction" id="field_presenterIntroduction"
+                           formControlName="presenterIntroduction"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.course.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

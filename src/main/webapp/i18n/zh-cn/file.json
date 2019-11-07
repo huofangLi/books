@@ -1,0 +1,25 @@
+{
+  "booksApp": {
+    "file": {
+      "home": {
+        "title": "Files",
+        "createLabel": "创建新 File",
+        "createOrEditLabel": "创建或编辑 File",
+        "notFound": "No File found"
+      },
+      "created": "File {{ param }} 创建成功",
+      "updated": "File {{ param }} 更新成功",
+      "deleted": "File {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 File {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "File"
+      },
+      "userId": "User Id",
+      "fileName": "File Name",
+      "fileContent": "File Content",
+      "createTime": "Create Time"
+    }
+  }
+}

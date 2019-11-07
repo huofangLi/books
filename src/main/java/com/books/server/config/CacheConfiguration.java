@@ -43,6 +43,18 @@ public class CacheConfiguration {
             createCache(cm, com.books.server.domain.User.class.getName());
             createCache(cm, com.books.server.domain.Authority.class.getName());
             createCache(cm, com.books.server.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.books.server.domain.Reading.class.getName());
+            createCache(cm, com.books.server.domain.Topic.class.getName());
+            createCache(cm, com.books.server.domain.BookClassification.class.getName());
+            createCache(cm, com.books.server.domain.Book.class.getName());
+            createCache(cm, com.books.server.domain.BookSummary.class.getName());
+            createCache(cm, com.books.server.domain.Course.class.getName());
+            createCache(cm, com.books.server.domain.Square.class.getName());
+            createCache(cm, com.books.server.domain.SpeciclTopic.class.getName());
+            createCache(cm, com.books.server.domain.WishList.class.getName());
+            createCache(cm, com.books.server.domain.Experience.class.getName());
+            createCache(cm, com.books.server.domain.Note.class.getName());
+            createCache(cm, com.books.server.domain.File.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

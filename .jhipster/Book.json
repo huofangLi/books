@@ -1,0 +1,48 @@
+{
+    "name": "Book",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "bookName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bookImage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "bookPages",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "isBorrow",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bookClassification",
+            "otherEntityRelationshipName": "book",
+            "relationshipName": "bookClassificationId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035002",
+    "javadoc": "书籍信息",
+    "entityTableName": "book",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

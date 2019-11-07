@@ -1,0 +1,32 @@
+{
+    "name": "Reading",
+    "fields": [
+        {
+            "fieldName": "page",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "reading",
+            "relationshipName": "bookId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107034959",
+    "javadoc": "读书表",
+    "entityTableName": "reading",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

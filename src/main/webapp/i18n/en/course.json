@@ -1,0 +1,33 @@
+{
+  "booksApp": {
+    "course": {
+      "home": {
+        "title": "Courses",
+        "createLabel": "Create a new Course",
+        "createOrEditLabel": "Create or edit a Course",
+        "notFound": "No Course found"
+      },
+      "created": "A new Course is created with identifier {{ param }}",
+      "updated": "A Course is updated with identifier {{ param }}",
+      "deleted": "A Course is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Course {{ id }}?"
+      },
+      "detail": {
+        "title": "Course"
+      },
+      "courseClassification": "Course Classification",
+      "courseName": "Course Name",
+      "courseImage": "Course Image",
+      "courseDescribe": "Course Describe",
+      "coursePrice": "Course Price",
+      "courseChapter": "Course Chapter",
+      "courseIntroduction": "Course Introduction",
+      "courseVideo": "Course Video",
+      "presenter": "Presenter",
+      "presenterImage": "Presenter Image",
+      "presenterIntroduction": "Presenter Introduction",
+      "createTime": "Create Time"
+    }
+  }
+}

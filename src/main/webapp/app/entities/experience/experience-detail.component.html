@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="experience">
+            <h2><span jhiTranslate="booksApp.experience.detail.title">Experience</span> {{experience.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="booksApp.experience.userId">User Id</span></dt>
+                <dd>
+                    <span>{{experience.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.duration">Duration</span></dt>
+                <dd>
+                    <span>{{experience.duration}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.content">Content</span></dt>
+                <dd>
+                    <span>{{experience.content}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.readOk">Read Ok</span></dt>
+                <dd>
+                    <span>{{experience.readOk}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.read">Read</span></dt>
+                <dd>
+                    <span>{{experience.read}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.note">Note</span></dt>
+                <dd>
+                    <span>{{experience.note}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.experience.readingId">Reading Id</span></dt>
+                <dd>
+                    <div *ngIf="experience.readingId">
+                        <a [routerLink]="['/reading', experience.readingId?.id, 'view']">{{experience.readingId?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/experience', experience.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

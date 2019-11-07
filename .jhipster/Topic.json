@@ -1,0 +1,40 @@
+{
+    "name": "Topic",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "content",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "topic",
+            "otherEntityRelationshipName": "topic",
+            "relationshipName": "parentId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035000",
+    "javadoc": "你听过的最戳心的一句话是什么",
+    "entityTableName": "topic",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

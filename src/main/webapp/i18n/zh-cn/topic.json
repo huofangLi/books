@@ -1,0 +1,26 @@
+{
+  "booksApp": {
+    "topic": {
+      "home": {
+        "title": "Topics",
+        "createLabel": "创建新 Topic",
+        "createOrEditLabel": "创建或编辑 Topic",
+        "notFound": "No Topic found"
+      },
+      "created": "Topic {{ param }} 创建成功",
+      "updated": "Topic {{ param }} 更新成功",
+      "deleted": "Topic {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Topic {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Topic"
+      },
+      "userId": "User Id",
+      "title": "Title",
+      "content": "Content",
+      "createTime": "Create Time",
+      "parentId": "Parent Id"
+    }
+  }
+}

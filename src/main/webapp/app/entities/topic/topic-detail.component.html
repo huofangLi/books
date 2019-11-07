@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="topic">
+            <h2><span jhiTranslate="booksApp.topic.detail.title">Topic</span> {{topic.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="booksApp.topic.userId">User Id</span></dt>
+                <dd>
+                    <span>{{topic.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.topic.title">Title</span></dt>
+                <dd>
+                    <span>{{topic.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.topic.content">Content</span></dt>
+                <dd>
+                    <span>{{topic.content}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.topic.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{topic.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.topic.parentId">Parent Id</span></dt>
+                <dd>
+                    <div *ngIf="topic.parentId">
+                        <a [routerLink]="['/topic', topic.parentId?.id, 'view']">{{topic.parentId?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/topic', topic.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

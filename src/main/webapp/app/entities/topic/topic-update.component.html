@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-topic-heading" jhiTranslate="booksApp.topic.home.createOrEditLabel">Create or edit a Topic</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.topic.userId" for="field_userId">User Id</label>
+                    <input type="number" class="form-control" name="userId" id="field_userId"
+                           formControlName="userId"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.topic.title" for="field_title">Title</label>
+                    <input type="text" class="form-control" name="title" id="field_title"
+                           formControlName="title"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.topic.content" for="field_content">Content</label>
+                    <input type="text" class="form-control" name="content" id="field_content"
+                           formControlName="content"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.topic.createTime" for="field_createTime">Create Time</label>
+                    <div class="d-flex">
+                        <input id="field_createTime" type="datetime-local" class="form-control" name="createTime" formControlName="createTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="booksApp.topic.parentId" for="field_parentId">Parent Id</label>
+                    <select class="form-control" id="field_parentId" name="parentId" formControlName="parentId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="topicOption.id === editForm.get('parentId').value?.id ? editForm.get('parentId').value : topicOption" *ngFor="let topicOption of topics; trackBy: trackTopicById">{{topicOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

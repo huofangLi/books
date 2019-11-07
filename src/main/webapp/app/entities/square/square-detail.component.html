@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="square">
+            <h2><span jhiTranslate="booksApp.square.detail.title">Square</span> {{square.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="booksApp.square.userId">User Id</span></dt>
+                <dd>
+                    <span>{{square.userId}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.square.bookSaying">Book Saying</span></dt>
+                <dd>
+                    <span>{{square.bookSaying}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.square.comment">Comment</span></dt>
+                <dd>
+                    <span>{{square.comment}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.square.createTime">Create Time</span></dt>
+                <dd>
+                    <span>{{square.createTime}}</span>
+                </dd>
+                <dt><span jhiTranslate="booksApp.square.parentId">Parent Id</span></dt>
+                <dd>
+                    <div *ngIf="square.parentId">
+                        <a [routerLink]="['/square', square.parentId?.id, 'view']">{{square.parentId?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="booksApp.square.bookId">Book Id</span></dt>
+                <dd>
+                    <div *ngIf="square.bookId">
+                        <a [routerLink]="['/book', square.bookId?.id, 'view']">{{square.bookId?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/square', square.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

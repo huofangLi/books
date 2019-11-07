@@ -7,6 +7,18 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "reading": "Reading",
+        "topic": "Topic",
+        "bookClassification": "Book Classification",
+        "book": "Book",
+        "bookSummary": "Book Summary",
+        "course": "Course",
+        "square": "Square",
+        "speciclTopic": "Specicl Topic",
+        "wishList": "Wish List",
+        "experience": "Experience",
+        "note": "Note",
+        "file": "File",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

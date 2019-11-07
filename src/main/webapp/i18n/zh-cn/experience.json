@@ -1,0 +1,28 @@
+{
+  "booksApp": {
+    "experience": {
+      "home": {
+        "title": "Experiences",
+        "createLabel": "创建新 Experience",
+        "createOrEditLabel": "创建或编辑 Experience",
+        "notFound": "No Experience found"
+      },
+      "created": "Experience {{ param }} 创建成功",
+      "updated": "Experience {{ param }} 更新成功",
+      "deleted": "Experience {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Experience {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Experience"
+      },
+      "userId": "User Id",
+      "duration": "Duration",
+      "content": "Content",
+      "readOk": "Read Ok",
+      "read": "Read",
+      "note": "Note",
+      "readingId": "Reading Id"
+    }
+  }
+}

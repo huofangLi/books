@@ -1,0 +1,24 @@
+{
+  "booksApp": {
+    "reading": {
+      "home": {
+        "title": "Readings",
+        "createLabel": "Create a new Reading",
+        "createOrEditLabel": "Create or edit a Reading",
+        "notFound": "No Reading found"
+      },
+      "created": "A new Reading is created with identifier {{ param }}",
+      "updated": "A Reading is updated with identifier {{ param }}",
+      "deleted": "A Reading is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Reading {{ id }}?"
+      },
+      "detail": {
+        "title": "Reading"
+      },
+      "page": "Page",
+      "createTime": "Create Time",
+      "bookId": "Book Id"
+    }
+  }
+}

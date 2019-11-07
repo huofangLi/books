@@ -1,0 +1,25 @@
+{
+  "booksApp": {
+    "speciclTopic": {
+      "home": {
+        "title": "Specicl Topics",
+        "createLabel": "Create a new Specicl Topic",
+        "createOrEditLabel": "Create or edit a Specicl Topic",
+        "notFound": "No Specicl Topic found"
+      },
+      "created": "A new Specicl Topic is created with identifier {{ param }}",
+      "updated": "A Specicl Topic is updated with identifier {{ param }}",
+      "deleted": "A Specicl Topic is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Specicl Topic {{ id }}?"
+      },
+      "detail": {
+        "title": "Specicl Topic"
+      },
+      "title": "Title",
+      "content": "Content",
+      "image": "Image",
+      "createTime": "Create Time"
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/**读书表*/
+entity Reading{
+    page Integer,
+    createTime ZonedDateTime
+}
+
+/**你听过的最戳心的一句话是什么*/
+entity Topic{
+    userId Long,
+	title String,
+    content String,
+    createTime ZonedDateTime
+}
+
+/**书籍分类*/
+entity BookClassification{
+    name String
+}
+
+/**书籍信息*/
+entity Book{
+    userId Long,
+    bookName String,
+    bookImage String,
+    bookPages Long,
+    isBorrow Boolean,
+    createTime ZonedDateTime
+}
+
+/**书摘*/
+entity BookSummary{
+    comment String,
+    createTime ZonedDateTime
+}
+
+/**课程*/
+entity Course{
+	courseClassification String,
+    courseName String,
+    courseImage String,
+    courseDescribe String,
+    coursePrice Double,
+    courseChapter String,
+    courseIntroduction String,
+    courseVideo String,
+    presenter String,
+    presenterImage String,
+    presenterIntroduction String,
+    createTime ZonedDateTime
+}
+
+/**广场*/
+entity Square{
+    userId Long,
+    bookSaying String,
+    comment String,
+    createTime ZonedDateTime
+}
+
+/**专题*/
+entity SpeciclTopic{
+    title String,
+    content String,
+    image String,
+    createTime ZonedDateTime
+}
+
+/**心愿单*/
+entity WishList{
+    userId Long,
+    createTime ZonedDateTime
+}
+
+/**阅历*/
+entity Experience{
+    userId Long,
+    duration Integer,
+    content Long,
+    readOk Integer,
+    read Integer,
+    note Integer
+}
+
+/**笔记*/
+entity Note{
+    userId Long,
+    note String,
+    createTime ZonedDateTime
+}
+
+/**档案*/
+entity File{
+    userId Long,
+    fileName String,
+    fileContent String,
+    createTime ZonedDateTime
+}
+
+relationship ManyToOne {
+    Reading{bookId} to Book
+    Topic{parentId} to Topic
+    BookSummary{bookId} to Book
+    Book{bookClassificationId} to BookClassification
+    Square{parentId} to Square
+    Square{bookId} to Book
+    WishList{bookId} to Book
+    Experience{readingId} to Reading
+    Note{bookId} to Book
+}
+
+paginate all with pagination
+service all with serviceImpl 
+

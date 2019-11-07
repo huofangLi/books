@@ -1,0 +1,27 @@
+{
+  "booksApp": {
+    "square": {
+      "home": {
+        "title": "Squares",
+        "createLabel": "Create a new Square",
+        "createOrEditLabel": "Create or edit a Square",
+        "notFound": "No Square found"
+      },
+      "created": "A new Square is created with identifier {{ param }}",
+      "updated": "A Square is updated with identifier {{ param }}",
+      "deleted": "A Square is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Square {{ id }}?"
+      },
+      "detail": {
+        "title": "Square"
+      },
+      "userId": "User Id",
+      "bookSaying": "Book Saying",
+      "comment": "Comment",
+      "createTime": "Create Time",
+      "parentId": "Parent Id",
+      "bookId": "Book Id"
+    }
+  }
+}

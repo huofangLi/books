@@ -1,0 +1,32 @@
+{
+    "name": "WishList",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "wishList",
+            "relationshipName": "bookId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035007",
+    "javadoc": "心愿单",
+    "entityTableName": "wish_list",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

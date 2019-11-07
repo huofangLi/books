@@ -1,0 +1,25 @@
+{
+  "booksApp": {
+    "speciclTopic": {
+      "home": {
+        "title": "Specicl Topics",
+        "createLabel": "创建新 Specicl Topic",
+        "createOrEditLabel": "创建或编辑 Specicl Topic",
+        "notFound": "No Specicl Topic found"
+      },
+      "created": "Specicl Topic {{ param }} 创建成功",
+      "updated": "Specicl Topic {{ param }} 更新成功",
+      "deleted": "Specicl Topic {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Specicl Topic {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Specicl Topic"
+      },
+      "title": "Title",
+      "content": "Content",
+      "image": "Image",
+      "createTime": "Create Time"
+    }
+  }
+}

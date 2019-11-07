@@ -1,0 +1,87 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="booksApp.course.home.title">Courses</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-course" [routerLink]="['/course/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="booksApp.course.home.createLabel">
+            Create new Course
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="courses?.length === 0">
+        <span jhiTranslate="booksApp.course.home.notFound">No courses found</span>
+    </div>
+    <div class="table-responsive" *ngIf="courses?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseClassification"><span jhiTranslate="booksApp.course.courseClassification">Course Classification</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseName"><span jhiTranslate="booksApp.course.courseName">Course Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseImage"><span jhiTranslate="booksApp.course.courseImage">Course Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseDescribe"><span jhiTranslate="booksApp.course.courseDescribe">Course Describe</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="coursePrice"><span jhiTranslate="booksApp.course.coursePrice">Course Price</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseChapter"><span jhiTranslate="booksApp.course.courseChapter">Course Chapter</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseIntroduction"><span jhiTranslate="booksApp.course.courseIntroduction">Course Introduction</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="courseVideo"><span jhiTranslate="booksApp.course.courseVideo">Course Video</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="presenter"><span jhiTranslate="booksApp.course.presenter">Presenter</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="presenterImage"><span jhiTranslate="booksApp.course.presenterImage">Presenter Image</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="presenterIntroduction"><span jhiTranslate="booksApp.course.presenterIntroduction">Presenter Introduction</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="createTime"><span jhiTranslate="booksApp.course.createTime">Create Time</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let course of courses ;trackBy: trackId">
+                <td><a [routerLink]="['/course', course.id, 'view' ]">{{course.id}}</a></td>
+                <td>{{course.courseClassification}}</td>
+                <td>{{course.courseName}}</td>
+                <td>{{course.courseImage}}</td>
+                <td>{{course.courseDescribe}}</td>
+                <td>{{course.coursePrice}}</td>
+                <td>{{course.courseChapter}}</td>
+                <td>{{course.courseIntroduction}}</td>
+                <td>{{course.courseVideo}}</td>
+                <td>{{course.presenter}}</td>
+                <td>{{course.presenterImage}}</td>
+                <td>{{course.presenterIntroduction}}</td>
+                <td>{{course.createTime | date:'medium'}}</td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/course', course.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/course', course.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'course', { outlets: { popup: course.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div [hidden]="courses?.length === 0">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

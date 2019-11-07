@@ -1,0 +1,11 @@
+id;user_id;book_name;book_image;book_pages;is_borrow;create_time
+1;42754;Grocery;red;89576;true;2019-11-06T16:25:28
+2;31435;Buckinghamshire Corporate;Investment Account;53984;true;2019-11-06T22:57:35
+3;22879;Generic neutral Salad;Auto Loan Account modular Refined;45653;true;2019-11-06T22:35:26
+4;18657;Human Ghana;Fresh granular Direct;27213;false;2019-11-06T12:17:20
+5;42710;copying;ability Hat Iraq;48482;false;2019-11-06T11:12:54
+6;11986;24/7;Gloves sky blue Oklahoma;40383;false;2019-11-07T02:16:33
+7;97178;Functionality;Moroccan Dirham;71227;false;2019-11-07T00:16:45
+8;28484;Computers Personal Loan Account Berkshire;Home;34507;true;2019-11-06T12:36:32
+9;23956;Granite Berkshire Designer;Credit Card Account;8085;true;2019-11-06T18:57:42
+10;23763;transmitter;Point Orchestrator;39882;true;2019-11-06T08:14:21

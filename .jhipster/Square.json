@@ -1,0 +1,47 @@
+{
+    "name": "Square",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "bookSaying",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "square",
+            "otherEntityRelationshipName": "square",
+            "relationshipName": "parentId",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "square",
+            "relationshipName": "bookId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035005",
+    "javadoc": "广场",
+    "entityTableName": "square",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

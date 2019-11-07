@@ -1,0 +1,25 @@
+{
+  "booksApp": {
+    "note": {
+      "home": {
+        "title": "Notes",
+        "createLabel": "创建新 Note",
+        "createOrEditLabel": "创建或编辑 Note",
+        "notFound": "No Note found"
+      },
+      "created": "Note {{ param }} 创建成功",
+      "updated": "Note {{ param }} 更新成功",
+      "deleted": "Note {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Note {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Note"
+      },
+      "userId": "User Id",
+      "note": "Note",
+      "createTime": "Create Time",
+      "bookId": "Book Id"
+    }
+  }
+}

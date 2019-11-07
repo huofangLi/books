@@ -1,0 +1,32 @@
+{
+    "name": "BookSummary",
+    "fields": [
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createTime",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "book",
+            "otherEntityRelationshipName": "bookSummary",
+            "relationshipName": "bookId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035003",
+    "javadoc": "书摘",
+    "entityTableName": "book_summary",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

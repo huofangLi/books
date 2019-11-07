@@ -1,0 +1,27 @@
+{
+  "booksApp": {
+    "square": {
+      "home": {
+        "title": "Squares",
+        "createLabel": "创建新 Square",
+        "createOrEditLabel": "创建或编辑 Square",
+        "notFound": "No Square found"
+      },
+      "created": "Square {{ param }} 创建成功",
+      "updated": "Square {{ param }} 更新成功",
+      "deleted": "Square {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Square {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Square"
+      },
+      "userId": "User Id",
+      "bookSaying": "Book Saying",
+      "comment": "Comment",
+      "createTime": "Create Time",
+      "parentId": "Parent Id",
+      "bookId": "Book Id"
+    }
+  }
+}

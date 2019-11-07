@@ -1,0 +1,24 @@
+{
+  "booksApp": {
+    "wishList": {
+      "home": {
+        "title": "Wish Lists",
+        "createLabel": "创建新 Wish List",
+        "createOrEditLabel": "创建或编辑 Wish List",
+        "notFound": "No Wish List found"
+      },
+      "created": "Wish List {{ param }} 创建成功",
+      "updated": "Wish List {{ param }} 更新成功",
+      "deleted": "Wish List {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Wish List {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Wish List"
+      },
+      "userId": "User Id",
+      "createTime": "Create Time",
+      "bookId": "Book Id"
+    }
+  }
+}

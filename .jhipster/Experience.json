@@ -1,0 +1,48 @@
+{
+    "name": "Experience",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "duration",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "content",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "readOk",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "read",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "reading",
+            "otherEntityRelationshipName": "experience",
+            "relationshipName": "readingId",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191107035008",
+    "javadoc": "阅历",
+    "entityTableName": "experience",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

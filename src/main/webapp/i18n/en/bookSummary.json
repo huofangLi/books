@@ -1,0 +1,24 @@
+{
+  "booksApp": {
+    "bookSummary": {
+      "home": {
+        "title": "Book Summaries",
+        "createLabel": "Create a new Book Summary",
+        "createOrEditLabel": "Create or edit a Book Summary",
+        "notFound": "No Book Summary found"
+      },
+      "created": "A new Book Summary is created with identifier {{ param }}",
+      "updated": "A Book Summary is updated with identifier {{ param }}",
+      "deleted": "A Book Summary is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Book Summary {{ id }}?"
+      },
+      "detail": {
+        "title": "Book Summary"
+      },
+      "comment": "Comment",
+      "createTime": "Create Time",
+      "bookId": "Book Id"
+    }
+  }
+}
