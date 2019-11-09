@@ -4,6 +4,7 @@ import com.aliyun.oss.OSS;
 import com.books.server.config.ApplicationProperties;
 import com.books.server.service.dto.FileDTO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +28,7 @@ public class UploadFileResource {
     private OSS ossClient;
 
     @PostMapping("/file/upload")
+    @ApiOperation(value = "上传至本地文件夹，需在yml文件中配置本地文件夹目录")
     public ResponseEntity<List<FileDTO>> uploadFile(@RequestParam("file") MultipartFile[] files) throws IOException {
         List<FileDTO> fileDTOList = new ArrayList<>();
         for (MultipartFile file : files) {
@@ -40,6 +42,7 @@ public class UploadFileResource {
 
 
     @PostMapping("/file/upload/aliyun")
+    @ApiOperation(value = "上传至阿里云服务器")
     public ResponseEntity<List<FileDTO>> uploadAliyun(@RequestParam("file") MultipartFile[] files) throws IOException {
         List<FileDTO> fileDTOList = new ArrayList<>();
         for (MultipartFile file : files) {
