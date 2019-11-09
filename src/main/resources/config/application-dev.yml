@@ -13,6 +13,17 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+application:
+  file-local:
+    path: D:\JHipsterStudy\uploadFile\
+    prefix: http://127.0.0.1:8080/files/
+  oss:
+    key: LTAI4FrPSC7xVVHVXvdLFinG
+    secret: WOc5lQFe5In3IAYb2IPVgtoix0WnAK
+    bucket-name: agile-files
+    prefix: https://agile-files.oss-cn-hangzhou.aliyuncs.com/
+    endpoint: http://oss-cn-hangzhou.aliyuncs.com
+
 logging:
   level:
     ROOT: DEBUG
